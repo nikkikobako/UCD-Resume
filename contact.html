@@ -15,10 +15,6 @@
     <script type="text/javascript">
         (function() {
             emailjs.init("user_gSACo5z7R8pumM8ntWFDy");
-            emailjs.send("gmail", "rosie", {
-                name: "Aaron",
-                notes: "The project that I want is..."
-            })
         })();
     </script>
     
@@ -68,12 +64,13 @@
                 <h3 class="contact-heading uppercase text-center">Got a project in mind?</h3>
                 <h5 class="uppercase text-center">Let's work together</h5>
             </div>
-            <div class="center-form">
-                <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
-                <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
-                <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Project Description" required></textarea>
-                <button type="submit" class="btn btn-secondary center-block">Send Project Request</button>
-               
+           <div class="center-form">
+                <form onsubmit="return sendMail(this);">
+                    <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
+                    <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
+                    <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" placeholder="Project Description" required></textarea>
+                    <button type="submit" class="btn btn-secondary center-block">Send Project Request</button>
+                </form>
             </div>
         </div>
     </section>
@@ -105,6 +102,7 @@
             </div>
         </div>
     </footer>
+     <script src="assets/js/sendEmail.js"></script>
 </body>
 
 </html>
